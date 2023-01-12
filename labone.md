@@ -7,6 +7,8 @@ Firstly, we sat at our desks and met our peers. We introduced ourselves and had 
 We then moved on to setting up our accounts on the system which allows us to access the school servers remotely. The password changing website was buggy and required multiple trials, but we got there at the end. *Although I did change the my school account password...*
 
 # Installing VS Code
+<img width="1470" alt="Schermata 2023-01-11 alle 15 30 10" src="https://user-images.githubusercontent.com/83614302/211950659-fa783185-dfa3-4047-8922-bd1e50cdd238.png">
+
 Next, we were instructed to install visual studio code, git for windows and bash for windows. However, I had already installed VS Code previously, and since I use a Mac, I did not have to install git and bash. I proceded to opening a new window on VS Code and opened the terminal. 
 
 # Accessing the course account remotely
@@ -27,21 +29,8 @@ Password:
 ```
 We answered yes to the first prompt, and then entered our password that we set up previously for the password prompt. When everything goes well, we will see the following output:
 
-```
-Last login: Sun Jan  2 14:03:05 2022 from 107-217-10-235.lightspeed.sndgca.sbcglobal.net
-quota: No filesystem specified.
-Hello cs15lwi23XX, you are currently logged into ieng6-203.ucsd.edu
+<img width="618" alt="Schermata 2023-01-11 alle 17 00 04" src="https://user-images.githubusercontent.com/83614302/211950775-9d068b5f-2b20-40f2-aa81-d7d4d05a0bdf.png">
 
-You are using 0% CPU on this system
-
-Cluster Status 
-Hostname     Time    #Users  Load  Averages  
-ieng6-201   23:25:01   0  0.08,  0.17,  0.11
-ieng6-202   23:25:01   1  0.09,  0.15,  0.11
-ieng6-203   23:25:01   1  0.08,  0.15,  0.11
-
-Sun Jan 02, 2022 11:28pm - Prepping cs15lwi23
-```
 
 Voilà, we're in. 
 
@@ -53,7 +42,11 @@ Now that we're in for the first time, we can finally test out the commands that 
 * `cd <path>` = "Change Directory” Used to switch the current working directory to the given path
 * `mkdir` = make a new directory
 
-Using the above, we tried navigating the directories. We then logged out by typing `exit`.
+Using the above, we tried navigating the directories. 
+
+<img width="405" alt="Schermata 2023-01-11 alle 17 00 57" src="https://user-images.githubusercontent.com/83614302/211950900-80351c6c-4b98-412f-86d2-f9d17b49f0d5.png">
+
+We then logged out by typing `exit`.
 
 # Conclusion
-This lab was fun. 
+This lab was fun, and I learnt a lot.
