@@ -41,6 +41,8 @@ Now that we're in for the first time, we can finally test out the commands that 
 * `pwd` = "Print working directory" displays the current working directory
 * `cd <path>` = "Change Directory” Used to switch the current working directory to the given path
 * `mkdir` = make a new directory
+* `..` = allows to go back directory
+* `~` = returns to home directory
 
 Using the above, we tried navigating the directories. 
 
