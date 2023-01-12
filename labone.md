@@ -51,4 +51,4 @@ Using the above, we tried navigating the directories.
 We then logged out by typing `exit`.
 
 # Conclusion
-This lab was fun, and I learnt a lot.
+This lab was fun, and I learnt to access the course account remotely on my own laptop and to navigate it! 
