@@ -1,15 +1,29 @@
 Our first lab for CSE 15L was interesting. Let me share with you what we did! 
 
-# Meeting our peers
-Firstly, we sat at our desks and met our peers. We introduced ourselves and had a quick conversation about people's majors and thoughts about our new course, CSE 15L. It was interesting to see my peers coming from different backgrounds and having different majors, and we still end up in the same course, and in the same lab session. 
-
 # Setting up our CSE 15L accounts
-We then moved on to setting up our accounts on the system which allows us to access the school servers remotely. The password changing website was buggy and required multiple trials, but we got there at the end. *Although I did change the my school account password...*
+Firstly we set up our remote course accounts. To set up our CSE 15L accounts, we visit [this site](https://sdacs.ucsd.edu/~icc/index.php]). Given the prompt, insert the last name and student ID at the bottom of the page to set the account password. You can also look up your account username using the account lookup, which would give you your username in the format *cs15lwi23XX*. When it's the first time the account is logged in, the website will prompt the user to reset password. 
+
+<img width="278" alt="Screen Shot 2023-01-24 at 9 19 44 PM" src=(https://user-images.githubusercontent.com/83614302/214487356-d9a705fa-7fca-41d7-b58d-c4784f69db29.png)>
+
+
+The chosen password must follow certain rules given. You can also use the randomly generated sequence of characters and symbols (but remember to note that password down). It is also worth remembering to tick the checkbox which prevents the password from being changed from the normal school account. 
 
 # Installing VS Code
 <img width="1470" alt="Schermata 2023-01-11 alle 15 30 10" src="https://user-images.githubusercontent.com/83614302/211950659-fa783185-dfa3-4047-8922-bd1e50cdd238.png">
 
-Next, we were instructed to install visual studio code, git for windows and bash for windows. However, I had already installed VS Code previously, and since I use a Mac, I did not have to install git and bash. I proceded to opening a new window on VS Code and opened the terminal. 
+Next, we were instructed to install visual studio code, git for windows and bash for windows. Since, I had already installed VS Code previously, I did not have to perform this task. Since Macs have git and bash built-in, I did not have to install git and bash. See below for download links for future reference. 
+
+[VS Code Download](https://code.visualstudio.com/) (Mac or Windows)
+
+[Git for Windows Download](https://code.visualstudio.com/)
+
+[Instructions for downloading Bash for Windows](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal/50527994#50527994)
+
+[Bash for Windows Download](https://git-scm.com/download/win)
+
+I proceeded to opening a new window on VS Code and opened the terminal. To do this, open Visual Studio Code, find "Terminal" at the top of the screen, then on the drop-down menu, click "New Terminal". It should look like something like the following.
+
+<img width="278" alt="Screen Shot 2023-01-24 at 9 19 44 PM" src="https://user-images.githubusercontent.com/83614302/214486054-63ffb90d-14fd-4c43-b07c-3be1bc55fa4f.png">
 
 # Accessing the course account remotely
 Through the terminal, we logged into the course account. In order to do so, the following commands were used:
@@ -51,4 +65,4 @@ Using the above, we tried navigating the directories.
 We then logged out by typing `exit`.
 
 # Conclusion
-This lab was fun, and I learnt to access the course account remotely on my own laptop and to navigate it! 
+This lab was enjoyable as I learnt how to access the course account remotely on my own laptop and to navigate it, which will be very helpful for future work!
