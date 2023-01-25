@@ -67,4 +67,4 @@ Using the above, we tried navigating the directories.
 We then logged out by typing `exit`.
 
 # Conclusion
-This lab was enjoyable as I learnt how to access the course account remotely on my own laptop and to navigate it, which will be very helpful for future work!
+This lab was enjoyable as I learned how to access the course account remotely on my own laptop and to navigate it, which will be very helpful for future work!
