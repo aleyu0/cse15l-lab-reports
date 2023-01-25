@@ -3,13 +3,13 @@ Our first lab for CSE 15L was interesting. Let me share with you what we did!
 # Setting up our CSE 15L accounts
 Firstly we set up our remote course accounts. To set up our CSE 15L accounts, we visit [this site](https://sdacs.ucsd.edu/~icc/index.php]). Given the prompt, insert the last name and student ID at the bottom of the page to set the account password. You can also look up your account username using the account lookup, which would give you your username in the format *cs15lwi23XX*. When it's the first time the account is logged in, the website will prompt the user to reset password. 
 
-<img width="278" alt="Screen Shot 2023-01-24 at 9 19 44 PM" src=(https://user-images.githubusercontent.com/83614302/214487356-d9a705fa-7fca-41d7-b58d-c4784f69db29.png)>
+<img width = "1000" alt="Screenshot when logged in" src="https://user-images.githubusercontent.com/83614302/214489565-0f0e09f5-ce4b-4f51-a2c8-d8d47f8ff474.jpeg">
 
 
 The chosen password must follow certain rules given. You can also use the randomly generated sequence of characters and symbols (but remember to note that password down). It is also worth remembering to tick the checkbox which prevents the password from being changed from the normal school account. 
 
 # Installing VS Code
-<img width="1470" alt="Schermata 2023-01-11 alle 15 30 10" src="https://user-images.githubusercontent.com/83614302/211950659-fa783185-dfa3-4047-8922-bd1e50cdd238.png">
+<img width="1000" alt="Screenshot of VSCode" src="https://user-images.githubusercontent.com/83614302/211950659-fa783185-dfa3-4047-8922-bd1e50cdd238.png">
 
 Next, we were instructed to install visual studio code, git for windows and bash for windows. Since, I had already installed VS Code previously, I did not have to perform this task. Since Macs have git and bash built-in, I did not have to install git and bash. See below for download links for future reference. 
 
@@ -23,7 +23,7 @@ Next, we were instructed to install visual studio code, git for windows and bash
 
 I proceeded to opening a new window on VS Code and opened the terminal. To do this, open Visual Studio Code, find "Terminal" at the top of the screen, then on the drop-down menu, click "New Terminal". It should look like something like the following.
 
-<img width="278" alt="Screen Shot 2023-01-24 at 9 19 44 PM" src="https://user-images.githubusercontent.com/83614302/214486054-63ffb90d-14fd-4c43-b07c-3be1bc55fa4f.png">
+<img width="280" alt="Screenshot of vscode terminal" src="https://user-images.githubusercontent.com/83614302/214486054-63ffb90d-14fd-4c43-b07c-3be1bc55fa4f.png">
 
 # Accessing the course account remotely
 Through the terminal, we logged into the course account. In order to do so, the following commands were used:
