@@ -3,7 +3,7 @@ Our first lab for CSE 15L was interesting. Let me share with you what we did!
 # Setting up our CSE 15L accounts
 Firstly we set up our remote course accounts. To set up our CSE 15L accounts, we visit [this site](https://sdacs.ucsd.edu/~icc/index.php]). Given the prompt, insert the last name and student ID at the bottom of the page to set the account password. You can also look up your account username using the account lookup, which would give you your username in the format *cs15lwi23XX*. When it's the first time the account is logged in, the website will prompt the user to reset password. 
 
-<img width = "1000" alt="Screenshot when logged in" src="https://user-images.githubusercontent.com/83614302/214489565-0f0e09f5-ce4b-4f51-a2c8-d8d47f8ff474.jpeg">
+<img width = "800" alt="Screenshot when logged in" src="https://user-images.githubusercontent.com/83614302/214489565-0f0e09f5-ce4b-4f51-a2c8-d8d47f8ff474.jpeg">
 
 
 The chosen password must follow certain rules given. You can also use the randomly generated sequence of characters and symbols (but remember to note that password down). It is also worth remembering to tick the checkbox which prevents the password from being changed from the normal school account. 
@@ -43,7 +43,7 @@ Password:
 ```
 We answered yes to the first prompt, and then entered our password that we set up previously for the password prompt. When everything goes well, we will see the following output:
 
-<img width="618" alt="Schermata 2023-01-11 alle 17 00 04" src="https://user-images.githubusercontent.com/83614302/211950775-9d068b5f-2b20-40f2-aa81-d7d4d05a0bdf.png">
+<img width="550" alt="Schermata 2023-01-11 alle 17 00 04" src="https://user-images.githubusercontent.com/83614302/211950775-9d068b5f-2b20-40f2-aa81-d7d4d05a0bdf.png">
 
 
 Voilà, we're in. 
