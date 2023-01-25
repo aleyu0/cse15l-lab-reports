@@ -8,6 +8,8 @@ Firstly we set up our remote course accounts. To set up our CSE 15L accounts, we
 
 The chosen password must follow certain rules given. You can also use the randomly generated sequence of characters and symbols (but remember to note that password down). It is also worth remembering to tick the checkbox which prevents the password from being changed from the normal school account. 
 
+For a step-by-step tutorial on how to change your password, see [here](https://docs.google.com/document/d/1hs7CyQeh-MdUfM9uv99i8tqfneos6Y8bDU0uhn1wqho/edit). 
+
 # Installing VS Code
 <img width="1000" alt="Screenshot of VSCode" src="https://user-images.githubusercontent.com/83614302/211950659-fa783185-dfa3-4047-8922-bd1e50cdd238.png">
 
