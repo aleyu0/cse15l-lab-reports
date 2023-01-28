@@ -145,7 +145,9 @@ The next image shows when we add a few elements to the arraylist through the URI
 
 When the URI is entered, it will be passed to the `handleRequest` method which would first distinguish whether there `/add-message` is the path. If so, the program will make sure that the query is formatted (as in has `?s=`) correctly. Once that is confirmed, the program will add the element in the query to the arraylist. Once that's done, the `handleRequest` method will call the `printString` method with the parameter of the arraylist. This method uses a for-loop to create a string with a new line for each element. This string can then be returned by `handleRequest` to display on screen. 
 
-## Explaination
+Finally we can check the URI with no query again. Since there are elements in the arraylist, we see the following:
+<img width="597" alt="new_no_query" src="https://user-images.githubusercontent.com/83614302/215252762-ffc9bd8f-6000-4a26-be5d-e7efd213eb24.png">
+
 # Part Two: Debugging methods
 ## Objective
 ## Original Code
