@@ -182,6 +182,31 @@ public void testReversed() {
 ```
 We then run the test. The following is the test result:
 
+<img width="600" alt="Screen Shot 2023-01-27 at 11 41 18 PM" src="https://user-images.githubusercontent.com/83614302/215253727-a401f2ed-5a98-4a0d-83f1-0749bd443e85.png">
+
+The test revealed that the `reverse` method wasn't outputting what it was supposed to. Instead of the `9` as the first element, it got `0`. Given this, we return to the code and review it. After a scan, or if it's not visible yet, a trace using the same data set, and we find the issue. 
 
 ## Solution
+<img width="600" alt="Screen Shot 2023-01-25 at 3 32 13 PM" src="https://user-images.githubusercontent.com/83614302/215253967-fdeb192e-2923-4a62-b043-a8c8559dcd8e.png">
+
+The image above shows what was changed to fix the bug. The parts highlighted in red is what was removed and the parts in green are the lines rewritten. The issue with the previous code is that it was assigning the inputted array's element with elements in the `newArray` which results to an array with `0`s only. Furthermore, the modified array wasn't even returned/saved. To fix this bug, we switched the positions of the arrays and made the old array the new array at the very end. 
+
+This would give us success in the test. 
+
+<img width="653" alt="Screen Shot 2023-01-27 at 11 51 19 PM" src="https://user-images.githubusercontent.com/83614302/215254183-b35c55d0-1750-4026-aa08-bb4388403bb8.png">
+
 # Part Three: Leanring Achievements
+In week 2, the CSE 15L course covered:
+* The fundamentals of URI
+*   HTTP(S) URLs = the protocol in which a server is accessed
+*   Domain = the party that hosts the server `domain.com`
+*   Path = allows for navigation within the server `/finder`
+*   Query = allows for specific requests for the server `?q=CSE15L`
+*   Anchor = navigates to a part/fragment of a page `#about-us`
+* How to copy files on local machine to the remote ieng6 machines using `scp`
+* How to clone git repositories `git clone <URL from github>` OR VS Code "clone repository" OR using Github Desktop
+* Steps to set up a web server
+* Testing and debugging
+
+The lectures and labs have been very interesting and very intuitive. Enjoying the course so far! 
+<sub><sup>A note to myself, ALWAYS COMMIT CHANGES every few minutes. This is the second time writing this whole lab report because the previous version got deleted when the page automatically refreshed 💀</sup></sub>
