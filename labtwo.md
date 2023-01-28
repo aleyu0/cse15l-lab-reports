@@ -124,7 +124,20 @@ We then run the program by running the class that contains the main method:
 ```
 java StringServer <Port_Number>
 ```
-*Note: <Port_Number> is replaced with a valid integer.*
+*Note: <Port_Number> is replaced with a valid integer. In the case of the example below, port `6565` is used.*
+
+When the program executes, a web server is online. We are given the message in the terminal:
+```
+Server Started! Visit http://localhost:6565 to visit.
+```
+
+We can now head over to our web browser to visit the webserver. 
+
+We start by visiting the web server without adding any queries at the end. 
+
+<img width="600" alt="localhost_no_query" src="https://user-images.githubusercontent.com/83614302/215251981-152c2c84-8ae7-4f35-8f51-756965630389.png">
+
+As you can see our prompt is outputted. This is because when the 
 
 ## Explaination
 # Part Two: Debugging methods
