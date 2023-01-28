@@ -139,10 +139,11 @@ We start by visiting the web server without adding any queries at the end.
 
 As you can see our prompt is outputted. This is because handleRequest checks if there are any queries in the URI and if there are any items in the arraylist that was initialised at execution. When there aren't any, the program will output this prompt. If the query was empty and there were items in the arraylist the list will be output it as we will see below. 
 
-The next image shows when we add an element to the arraylist through the URI.
+The next image shows when we add a few elements to the arraylist through the URI.
 
 <img width="600" alt="query_Cars" src="https://user-images.githubusercontent.com/83614302/215252323-b6ff8f9e-c7bb-43b5-971d-9bbf4920d0cd.png"> <img width="600" alt="query_Trains" src="https://user-images.githubusercontent.com/83614302/215252332-6e17c7dc-a9b6-4ae2-bcb3-1812eca436e8.png"> <img width="600" alt="query_Planes" src="https://user-images.githubusercontent.com/83614302/215252336-5877b3b7-0da4-4703-9a9c-a046946d898c.png">
 
+When the URI is entered, it will be passed to the `handleRequest` method which would first distinguish whether there `/add-message` is the path. If so, the program will make sure that the query is formatted (as in has `?s=`) correctly. Once that is confirmed, the program will add the element in the query to the arraylist. Once that's done, the `handleRequest` method will call the `printString` method with the parameter of the arraylist. This method uses a for-loop to create a string with a new line for each element. This string can then be returned by `handleRequest` to display on screen. 
 
 ## Explaination
 # Part Two: Debugging methods
