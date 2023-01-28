@@ -116,6 +116,16 @@ The webserver is composed of two files:
 
   ```
 ## Running
+To start the web server we open a new terminal on VS Code in the current working directory. To all classes in the directory, we enter:
+```
+javac *
+```
+We then run the program by running the class that contains the main method:
+```
+java StringServer <Port_Number>
+```
+*Note: <Port_Number> is replaced with a valid integer.*
+
 ## Explaination
 # Part Two: Debugging methods
 ## Objective
