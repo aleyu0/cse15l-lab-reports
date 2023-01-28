@@ -3,7 +3,7 @@
 We were given the task to create a web server named `StringServer` that would keep a list of strings. The user would be able to add strings to that list by sending request via the URI. 
 ## Code
 The webserver is composed of two files: 
-* StringServerHandler.java - including `ServerHttpHandler` class (with `handlerRequest` method, `printString` method) and `stringServer` class (with the `main` method).
+* StringServerHandler.java - including `StringHttpHandler` class (with `handlerRequest` method, `printString` method) and `stringServer` class (with the `main` method).
   ```
   import java.io.IOException;
   import java.net.URI;
@@ -116,7 +116,7 @@ The webserver is composed of two files:
 
     ```
 ## Running
-To start the web server we open a new terminal on VS Code in the current working directory. To all classes in the directory, we enter:
+To start the web server we open a new terminal on VS Code in the current working directory. To compile all classes in the directory, we enter:
 ```
 javac *
 ```
@@ -124,26 +124,26 @@ We then run the program by running the class that contains the main method:
 ```
 java StringServer <Port_Number>
 ```
-*Note: <Port_Number> is replaced with a valid integer. In the case of the example below, port `6565` is used.*
+*Note:* `<Port_Number>` *is replaced with a valid integer. In the case of the example below, port* `6565` *is used.*
 
 When the program executes, a web server is online. We are given the message in the terminal:
 ```
 Server Started! Visit http://localhost:6565 to visit.
 ```
 
-We can now head over to our web browser to visit the webserver. 
+We can now head over to our web browser to visit the web server. 
 
 We start by visiting the web server without adding any queries at the end. 
 
 <img width="600" alt="localhost_no_query" src="https://user-images.githubusercontent.com/83614302/215251981-152c2c84-8ae7-4f35-8f51-756965630389.png">
 
-As you can see our prompt is outputted. This is because handleRequest checks if there are any queries in the URI and if there are any items in the arraylist that was initialised at execution. When there aren't any, the program will output this prompt. If the query was empty and there were items in the arraylist the list will be output it as we will see below. 
+As you can see, our prompt is outputted. This is because `handleRequest` checks if there are any queries in the URI and whether there are any items in the arraylist. When there aren't any, the program will output this prompt. If the query was empty and there were items in the arraylist the list will be outputed as we will see below. 
 
-The next image shows when we add a few elements to the arraylist through the URI.
+The following images show what happens when we add a few elements to the arraylist through the URI.
 
 <img width="600" alt="query_Cars" src="https://user-images.githubusercontent.com/83614302/215252323-b6ff8f9e-c7bb-43b5-971d-9bbf4920d0cd.png"> <img width="600" alt="query_Trains" src="https://user-images.githubusercontent.com/83614302/215252332-6e17c7dc-a9b6-4ae2-bcb3-1812eca436e8.png"> <img width="600" alt="query_Planes" src="https://user-images.githubusercontent.com/83614302/215252336-5877b3b7-0da4-4703-9a9c-a046946d898c.png">
 
-When the URI is entered, it will be passed to the `handleRequest` method which would first distinguish whether there `/add-message` is the path. If so, the program will make sure that the query is formatted (as in has `?s=`) correctly. Once that is confirmed, the program will add the element in the query to the arraylist. Once that's done, the `handleRequest` method will call the `printString` method with the parameter of the arraylist. This method uses a for-loop to create a string with a new line for each element. This string can then be returned by `handleRequest` to display on screen. 
+When the URI is entered, it will be passed to the `handleRequest` method which would first distinguish whether there is a `/add-message` path. If so, the program will make sure that the query is formatted (as in has `?s=`) correctly. Once that is confirmed, the program will add the element in the query to the arraylist. Once that's done, the `handleRequest` method will call the `printString` method with the parameter of the arraylist. This method uses a for-loop to create a string with a new line for each element. This string can then be returned by `handleRequest` to be display on screen. 
 
 Finally we can check the URI with no query again. Since there are elements in the arraylist, the program will print the list using the `printString` method.
 
@@ -151,7 +151,7 @@ Finally we can check the URI with no query again. Since there are elements in th
 
 # Part Two: Debugging methods
 ## Objective
-During the lab session on Wednesday, we were given a set of programs which contained bug in them. Bugs are flaws in the program (logical or syntactical) that produces undesired outputs. The following explain one of the bugs, and the process of ✨ Debugging ✨.
+During the lab session on Wednesday, we were given a set of programs which contained bugs in them. Bugs are flaws in the program (logical or syntactical) that produces undesired outputs. The following explain one of the bugs, and the process of ✨Debugging✨.
 ## Original Code
 ```
 // Returns a *new* array with all the elements of the input array in reversed
@@ -170,8 +170,8 @@ Bugs may not be easy to spot, often there are no errors. They just happen quietl
 import static org.junit.Assert.*;
 import org.junit.*;
 ```
-Then we make a test method that tests a specific program method. Remember to add a `@Test` before the method to annotate our test method. Using `assertEqual(<ConstructiveMessage>, <ExpectedValue>, <ActualValue>)` we can see if the ourput of our program is what we want! 
-*Note: Replace `<ConstructiveMessage>` with a constructive message, `<ExpectedValue>` with the desired value (whether it's an integer, string, or array), and `<ActualValue>` with either a variable or a method that returns a variable.*
+Then we make a test method that tests a specific program method. Remember to add a `@Test` before the method to annotate our test method. Using `assertEquals(<ConstructiveMessage>, <ExpectedValue>, <ActualValue>)` we can see if the output of our program is what we want! 
+*Note: Replace* `<ConstructiveMessage>` *with a constructive message,* `<ExpectedValue>` *with the desired value (whether it's an integer, string, or array), and* `<ActualValue>` *with either a variable or a method that returns a variable.*
 
 To test the `reversed()` method, we used the following tests: 
 ```
@@ -185,7 +185,7 @@ We then run the test. The following is the test result:
 
 <img width="600" alt="Screen Shot 2023-01-27 at 11 41 18 PM" src="https://user-images.githubusercontent.com/83614302/215253727-a401f2ed-5a98-4a0d-83f1-0749bd443e85.png">
 
-The test revealed that the `reverse` method wasn't outputting what it was supposed to. Instead of the `9` as the first element, it got `0`. Given this, we return to the code and review it. After a scan, or if it's not visible yet, a trace using the same data set, and we find the issue. 
+The test revealed that the `reverse` method wasn't outputting what it was supposed to. Instead of `9` as the first element, it got `0`. Given this, we return to the code and review it. After a scan, or if it's not visible yet, a trace using the same data set, and we find the issue. 
 
 ## Solution
 <img width="600" alt="Screen Shot 2023-01-25 at 3 32 13 PM" src="https://user-images.githubusercontent.com/83614302/215253967-fdeb192e-2923-4a62-b043-a8c8559dcd8e.png">
@@ -196,14 +196,14 @@ This would give us success in the test.
 
 <img width="600" alt="Screen Shot 2023-01-27 at 11 51 19 PM" src="https://user-images.githubusercontent.com/83614302/215254183-b35c55d0-1750-4026-aa08-bb4388403bb8.png">
 
-# Part Three: Leanring Achievements
-In week 2, the CSE 15L course covered:
-* The fundamentals of URI
-*   HTTP(S) URLs = the protocol in which a server is accessed
-*   Domain = the party that hosts the server `domain.com`
-*   Path = allows for navigation within the server `/finder`
-*   Query = allows for specific requests for the server `?q=CSE15L`
-*   Anchor = navigates to a part/fragment of a page `#about-us`
+# Part Three: Learning Achievements
+In weeks 2 and 3, I learned the following in the CSE 15L course:
+* The fundamentals of URLs:
+  * HTTP(S) URLs = the protocol in which the web browser will use to view the content
+  * Domain = the party that hosts the server `domain.com`
+  * Path = allows for navigation within the server `/finder`
+  * Query = allows for specific requests for the server `?q=CSE15L`
+  * Anchor = navigates to a part/fragment of a page `#about-us`
 * How to copy files on local machine to the remote ieng6 machines using `scp`
 * How to clone git repositories `git clone <URL from github>` OR VS Code "clone repository" OR using Github Desktop
 * Steps to set up a web server
