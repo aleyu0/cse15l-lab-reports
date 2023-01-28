@@ -180,6 +180,8 @@ public void testReversed() {
   assertArrayEquals(new int[]{ 9, 5, 3 }, ArrayExamples.reversed(input1));
 }
 ```
+We then run the test. The following is the test result:
+
 
 ## Solution
 # Part Three: Leanring Achievements
