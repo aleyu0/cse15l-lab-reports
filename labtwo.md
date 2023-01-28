@@ -194,7 +194,7 @@ The image above shows what was changed to fix the bug. The parts highlighted in 
 
 This would give us success in the test. 
 
-<img width="653" alt="Screen Shot 2023-01-27 at 11 51 19 PM" src="https://user-images.githubusercontent.com/83614302/215254183-b35c55d0-1750-4026-aa08-bb4388403bb8.png">
+<img width="600" alt="Screen Shot 2023-01-27 at 11 51 19 PM" src="https://user-images.githubusercontent.com/83614302/215254183-b35c55d0-1750-4026-aa08-bb4388403bb8.png">
 
 # Part Three: Leanring Achievements
 In week 2, the CSE 15L course covered:
