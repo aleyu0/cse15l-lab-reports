@@ -152,6 +152,34 @@ Finally we can check the URI with no query again. Since there are elements in th
 ## Objective
 During the lab session on Wednesday, we were given a set of programs which contained bug in them. Bugs are flaws in the program (logical or syntactical) that produces undesired outputs. The following explain one of the bugs, and the process of ✨ Debugging ✨.
 ## Original Code
+```
+// Returns a *new* array with all the elements of the input array in reversed
+// order
+static int[] reversed(int[] arr) {
+  int[] newArray = new int[arr.length];
+  for(int i = 0; i < arr.length; i += 1) {
+    arr[i] = newArray[arr.length - i - 1];
+  }
+  return arr;
+}
+```
 ## Bugs
+Bugs may not be easy to spot, often there are no errors. They just happen quietly until you realise that the output isn't what you desired. So instead of getting to that point, we make a tester file. We will use JUnit to test this piece of code. We create a file called `ArrayTester.java` and import the following:
+```
+import static org.junit.Assert.*;
+import org.junit.*;
+```
+Then we make a test method that tests a specific program method. Remember to add a `@Test` before the method to annotate our test method. Using `assertEqual(<ConstructiveMessage>, <ExpectedValue>, <ActualValue>)` we can see if the ourput of our program is what we want! 
+*Note: Replace `<ConstructiveMessage>` with a constructive message, `<ExpectedValue>` with the desired value (whether it's an integer, string, or array), and `<ActualValue>` with either a variable or a method that returns a variable.*
+
+To test the `reversed()` method, we used the following tests: 
+```
+@Test
+public void testReversed() {
+  int[] input1 = { 3, 5, 9 };
+  assertArrayEquals(new int[]{ 9, 5, 3 }, ArrayExamples.reversed(input1));
+}
+```
+
 ## Solution
 # Part Three: Leanring Achievements
