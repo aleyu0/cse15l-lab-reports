@@ -130,6 +130,8 @@ When the program executes, a web server is online. We are given the message in t
 ```
 Server Started! Visit http://localhost:6565 to visit.
 ```
+At this point some values have been set, and will not change until the end of the session. The URI, along with the port number are set when executed, which would allow the user to access this server whenever the local host is and the port number is entered (as long as the program is running). 
+
 
 We can now head over to our web browser to visit the web server. 
 
@@ -143,7 +145,7 @@ The following images show what happens when we add a few elements to the arrayli
 
 <img width="600" alt="query_Cars" src="https://user-images.githubusercontent.com/83614302/215252323-b6ff8f9e-c7bb-43b5-971d-9bbf4920d0cd.png"> <img width="600" alt="query_Trains" src="https://user-images.githubusercontent.com/83614302/215252332-6e17c7dc-a9b6-4ae2-bcb3-1812eca436e8.png"> <img width="600" alt="query_Planes" src="https://user-images.githubusercontent.com/83614302/215252336-5877b3b7-0da4-4703-9a9c-a046946d898c.png">
 
-When the URI is entered, it will be passed to the `handleRequest` method which would first distinguish whether there is a `/add-message` path. If so, the program will make sure that the query is formatted (as in has `?s=`) correctly. Once that is confirmed, the program will add the element in the query to the arraylist. Once that's done, the `handleRequest` method will call the `printString` method with the parameter of the arraylist. This method uses a for-loop to create a string with a new line for each element. This string can then be returned by `handleRequest` to be display on screen. 
+When the URI is entered, it will be passed to the `handleRequest` method which would first distinguish whether there is a `/add-message` path. If so, the program will make sure that the query is formatted (as in has `?s=`) correctly. Once that is confirmed, the program will add the element in the query to the arraylist. Once that's done, the `handleRequest` method will call the `printString` method with the parameter of the arraylist. This method uses a for-loop to create a string with a new line for each element. This string can then be returned by `handleRequest` to be display on screen. The queries are values that can be changed everytime the user sends a new request, however, the arraylist keeps an record of all the string values inputted as it is an instance variable. 
 
 Finally we can check the URI with no query again. Since there are elements in the arraylist, the program will print the list using the `printString` method.
 
@@ -177,13 +179,15 @@ To test the `reversed()` method, we used the following tests:
 ```
 @Test
 public void testReversed() {
-  int[] input1 = { 3, 5, 9 };
-  assertArrayEquals(new int[]{ 9, 5, 3 }, ArrayExamples.reversed(input1));
+  int[] input1 = { 3, 5, 9 }; // failure inducing input
+  int[] input2 = { 0, 0, 0 }; // non failure inducing input
+  assertArrayEquals(new int[]{ 9, 5, 3 }, ArrayExamples.reversed(input1)); // failure inducing input
+  assertArrayEquals(new int[]{ 0, 0, 0 }, ArrayExampls.reversed(input2)); // non failure inducing input
 }
 ```
-We then run the test. The following is the test result:
 
-<img width="600" alt="Screen Shot 2023-01-27 at 11 41 18 PM" src="https://user-images.githubusercontent.com/83614302/215253727-a401f2ed-5a98-4a0d-83f1-0749bd443e85.png">
+<img width="600" alt="Screen Shot 2023-01-29 at 12 10 33 PM" src="https://user-images.githubusercontent.com/83614302/215353230-74915b6f-5707-474a-9c8c-1733576448d5.png">
+
 
 The test revealed that the `reverse` method wasn't outputting what it was supposed to. Instead of `9` as the first element, it got `0`. Given this, we return to the code and review it. After a scan, or if it's not visible yet, a trace using the same data set, and we find the issue. 
 
@@ -194,7 +198,8 @@ The image above shows what was changed to fix the bug. The parts highlighted in 
 
 This would give us success in the test. 
 
-<img width="600" alt="Screen Shot 2023-01-27 at 11 51 19 PM" src="https://user-images.githubusercontent.com/83614302/215254183-b35c55d0-1750-4026-aa08-bb4388403bb8.png">
+<img width="600" alt="Screen Shot 2023-01-29 at 12 13 48 PM" src="https://user-images.githubusercontent.com/83614302/215353395-532cf4b1-5a0c-43fb-ad99-1d306bf5fed2.png">
+
 
 # Part Three: Learning Achievements
 In weeks 2 and 3, I learned the following in the CSE 15L course:
