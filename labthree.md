@@ -1,7 +1,7 @@
 # `Grep` commands
 To find out what grep does, it would be helpful for us to ask for the manual in out command. So, after I have logged into my remote account through `ssh`, I asked for the manual through `man grep`. In this lab report, we will explore `-rl`, `-c`, `-n`, and `v` and use them in the the `./written_2` directory given from the skill demo data. 
 
-#`grep -rl`
+## `grep -rl`
 * `-l` - `Suppress  normal  output;  instead  print the name of each input file from which output would normally have been printed.  The scanning will stop on the first match.  (-l is specified by POSIX.)` essentially lists all of the matched produced by the other command.
 * `-r` - `Read all files under each directory, recursively, following symbolic links only if they are on the command line.  This is equivalent to the -d recurse option.`
 
@@ -15,3 +15,11 @@ Grep will finds all the matches and outputs
 ```
 written_2/travel_guides/berlitz2/Bahamas-History.txt
 ```
+
+To prove this works, we can check the outputed file path.
+```
+cat written_2/travel_guides/berlitz2/Bahamas-History.txt
+```
+<img width="100%" alt="Screen Shot 2023-02-11 at 3 02 26 PM" src="https://user-images.githubusercontent.com/83614302/218284742-9a9d6f4e-9bd9-47f4-9391-7075f7a81641.png">
+
+
