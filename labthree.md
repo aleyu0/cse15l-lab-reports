@@ -18,8 +18,51 @@ written_2/travel_guides/berlitz2/Bahamas-History.txt
 
 To prove this works, we can check the outputed file path.
 ```
-cat written_2/travel_guides/berlitz2/Bahamas-History.txt
+$ cat written_2/travel_guides/berlitz2/Bahamas-History.txt
 ```
 <img width="100%" alt="Screen Shot 2023-02-11 at 3 02 26 PM" src="https://user-images.githubusercontent.com/83614302/218284742-9a9d6f4e-9bd9-47f4-9391-7075f7a81641.png">
 
+As you can see, Lucayans appears in this document as highlighted. 
 
+We now try this command with a keyword that occurs in multiple files. 
+```
+grep -rl "Italy"
+```
+This would putput:
+```
+.git/index
+written_2/non-fiction/OUP/Castro/chP.txt
+written_2/non-fiction/OUP/Fletcher/ch2.txt
+written_2/non-fiction/OUP/Fletcher/ch9.txt
+written_2/non-fiction/OUP/Rybczynski/ch2.txt
+written_2/travel_guides/berlitz1/HistoryFrance.txt
+written_2/travel_guides/berlitz1/HistoryGreek.txt
+written_2/travel_guides/berlitz1/HistoryIstanbul.txt
+written_2/travel_guides/berlitz1/HistoryItaly.txt
+written_2/travel_guides/berlitz1/HistoryMadeira.txt
+written_2/travel_guides/berlitz1/HistoryMallorca.txt
+written_2/travel_guides/berlitz1/IntroItaly.txt
+written_2/travel_guides/berlitz1/IntroLasVegas.txt
+written_2/travel_guides/berlitz1/WhatToItaly.txt
+written_2/travel_guides/berlitz1/WhereToEgypt.txt
+written_2/travel_guides/berlitz1/WhereToFWI.txt
+written_2/travel_guides/berlitz1/WhereToFrance.txt
+written_2/travel_guides/berlitz1/WhereToGreek.txt
+written_2/travel_guides/berlitz1/WhereToIstanbul.txt
+written_2/travel_guides/berlitz1/WhereToItaly.txt
+written_2/travel_guides/berlitz1/WhereToMadrid.txt
+written_2/travel_guides/berlitz2/Algarve-History.txt
+written_2/travel_guides/berlitz2/Athens-History.txt
+written_2/travel_guides/berlitz2/Athens-WhatToDo.txt
+written_2/travel_guides/berlitz2/Barcelona-WhereToGo.txt
+written_2/travel_guides/berlitz2/California-WhereToGo.txt
+written_2/travel_guides/berlitz2/Canada-History.txt
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt
+written_2/travel_guides/berlitz2/Costa-History.txt
+written_2/travel_guides/berlitz2/CostaBlanca-History.txt
+written_2/travel_guides/berlitz2/Crete-WhereToGo.txt
+written_2/travel_guides/berlitz2/CstaBlanca-WhereToGo.txt
+written_2/travel_guides/berlitz2/Paris-WhereToGo.txt
+written_2/travel_guides/berlitz2/Portugal-History.txt
+written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
+```
