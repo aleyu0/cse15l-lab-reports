@@ -2,8 +2,8 @@
 To find out what grep does, it would be helpful for us to ask for the manual in out command. So, after I have logged into my remote account through `ssh`, I asked for the manual through `man grep`. In this lab report, we will explore `-rl`, `-c`, `-n`, and `v` and use them in the the `./written_2` directory given from the skill demo data. 
 
 ## `grep -rl`
-* `-l` - `Suppress  normal  output;  instead  print the name of each input file from which output would normally have been printed.  The scanning will stop on the first match.  (-l is specified by POSIX.)` essentially lists all of the matched produced by the other command.
-* `-r` - `Read all files under each directory, recursively, following symbolic links only if they are on the command line.  This is equivalent to the -d recurse option.`
+* `grep -l` - `Suppress  normal  output;  instead  print the name of each input file from which output would normally have been printed.  The scanning will stop on the first match.  (-l is specified by POSIX.)` essentially lists all of the matched produced by the other command.
+* `grep -r` - `Read all files under each directory, recursively, following symbolic links only if they are on the command line.  This is equivalent to the -d recurse option.`
 
 We use these two commands together as `-rl` so that that we recusrsively search for a pattern within the files in the subdirectories it is given. When grep finds, the files with the corresponding pattern, it will print out the list of the file paths. 
 
@@ -91,4 +91,14 @@ Berk/ch7.txt:42
 which indicates that "The" occurs in `ch1.txt` 60 times, in `ch2.txt` 67 times, in `CH4.txt` 66 times, and in `ch7.txt` 42 times.
 
 ## `grep -n`
+* `grep -n` - `Prefix each line of output with the 1-based line number within its input file.  (-n is specified by POSIX.)` displays the number of the lines in which the given pattern/keyword is found in a file. 
 
+Let's test this out by searching for the word "heritage" in the `chA.txt` in the `Castro/` directory/ 
+```
+$ grep -n "heritage" chA.txt 
+```
+We will get the following output: 
+```
+19:La Adelita is more than a romantic image to modern-day Chicanas. She continues to symbolize feminine independence, integrity, the fight for justice, and a proud heritage. Because the major influx of Mexican immigration into the United States was during the Mexican Revolution, many Chicanos and Chicanas grew up hearing stories about soldaderas and La Adelita from relatives, parents, and grandparents. In the late 1960s Chicanas who joined the Brown Berets de Aztlán, a political pseudomilitary youth group, often dressed as Adelitas, wearing rebozos (shawls) and bandoliers crisscrossed over their chests.
+107:Mexicans were a majority through most of the nineteenth century, and Tucson had a bicultural spirit that was unique in the Southwest. A Mexican middle class ran some of the largest businesses, held political offices, became artists or intellectuals, funded private and public education, and created a prosperous Mexican society envied by other communities of the Southwest, with elegant theaters like the Teatro Carmen and Spanish-language newspapers. Tucson’s proximity to Mexico, especially Sonora, permitted Tucsonenses to remain close to their Mexican heritage. According to Thomas Sheridan, “This Mexican elite represented a local florescence of Latin American civilization in Arizona, its society and culture linking Tucson with the finest traditions of both Mexico and Spain” (3). Although there was a strong Mexican middle class, many Chicanos were working class, such as butchers, barbers, and later railroad workers. The railroad arrived in southern Arizona on March 20, 1880, and this changed society in Tucson forever.
+```
