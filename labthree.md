@@ -120,4 +120,34 @@ showing us that the word "money" can be found in `chL.txt` on line 42 and `chP.t
 ## `grep -v`
 * `grep -v` - `Invert the sense of matching, to select non-matching lines.  (-v is specified by POSIX.)`, will print out the lines that do not include the specified keyword/pattern. 
 
-We can try to look for a line that doesn't include a space in the 
+We can try to look for a line that doesn't include a space in `ch1.txt`:
+```
+$ grep -v " " ch1.txt
+```
+this will print out:
+```
+
+
+
+
+“Yes.”
+
+
+```
+Notice how it doesn't return the line number anymore, but instead only the contents of that line. We have got a bunch of returns (empty lines) and one line that only says `"Yes."`. We can ask for the line number by changed the `-v` to `-vn`:
+```
+$ grep -vn " " ch1.txt
+```
+giving us:
+```
+1:
+2:
+3:
+4:
+61:“Yes.”
+146:
+147:
+148:
+```
+this way we know that lines 1, 2, 3, 4, 146, 147 and 148 are empty lines and the line with one single word is located on line 61. 
+
