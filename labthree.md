@@ -66,3 +66,26 @@ written_2/travel_guides/berlitz2/Paris-WhereToGo.txt
 written_2/travel_guides/berlitz2/Portugal-History.txt
 written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
 ```
+If we wanted to inport these outputs into a `.txt` file, we simply add `> results.txt` at the end, which would create a file which includes the output. 
+
+## `grep -rc`
+* `grep -c` - `Suppress  normal  output;  instead  print  a  count of matching lines for each input file.  With the -v, --invert-match option (see below), count non-matching lines.  (-c is specified by POSIX.)` will output a number indicating the number of times a given pattern/keyword apprears in a file. We can extend this functionality to find the number of occurances of the a keyword in a directory by using `-rc`.
+
+We can try this out by looking for the number of times the word "The" is mentioned in the file `ch1.txt`.
+```
+$ grep -c "The" ch1.txt
+```
+we get an output of `60`. 
+
+We can also try to find how many times "The" is used in the `Berk` directory in different files. 
+```
+$ grep -rc "The" Berk/
+```
+and we get the following output
+```
+Berk/CH4.txt:66
+Berk/ch1.txt:60
+Berk/ch2.txt:67
+Berk/ch7.txt:42
+```
+which indicates that "The" occurs in `ch1.txt` 60 times, in `ch2.txt` 67 times, in `CH4.txt` 66 times, and in `ch7.txt` 42 times.  
