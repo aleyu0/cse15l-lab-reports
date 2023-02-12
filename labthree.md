@@ -151,3 +151,5 @@ giving us:
 ```
 this way we know that lines 1, 2, 3, 4, 146, 147 and 148 are empty lines and the line with one single word is located on line 61. 
 
+#Sources
+For this lab report, I used the bash manual through `man grep`, the CSE 15L website, and the GeekforGeeks website. In addition, some information were provided by ChatGPT. All commands were tested on the ieng6 remote server. The data in which the commands were tested (`written_2/` directory) was provided by https://anc.org/data/oanc/download/, a free and open corpus of English text samples.
