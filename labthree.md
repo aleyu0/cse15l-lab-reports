@@ -1,17 +1,17 @@
 # `Grep` commands
-To find out what grep does, it would be helpful for us to ask for the manual in out command. So, after I have logged into my remote account through `ssh`, I asked for the manual through `man grep`. In this lab report, we will explore `-l`, `-c`, `-n`, and `-v` and use them in the the `./written_2` directory given from the skill demo data. 
+To find out what `grep` does, it would be helpful for us to ask for the manual in our command. So, after I have logged into my remote ieng6 server through `ssh`, I asked for the manual through `man grep`. In this lab report, we will explore `-l`, `-c`, `-n`, and `-v` and use them in the the `./written_2` directory given from the `skill demo data`. 
 
 ## `grep -l`
-* `grep -l` - `Suppress  normal  output;  instead  print the name of each input file from which output would normally have been printed.  The scanning will stop on the first match.  (-l is specified by POSIX.)` essentially lists all of the matched produced by the other command.
-* `grep -r` - `Read all files under each directory, recursively, following symbolic links only if they are on the command line.  This is equivalent to the -d recurse option.`
+* `grep -l` - `Suppress  normal  output;  instead  print the name of each input file from which output would normally have been printed.  The scanning will stop on the first match.  (-l is specified by POSIX.)` essentially lists the filenames of all the matched files produced by the other command.
+* `grep -r` - `Read all files under each directory, recursively, following symbolic links only if they are on the command line.  This is equivalent to the -d recurse option.` ultimately searches recursively through files inside f directories and sub-directories to find matches to a given keyboard.
 
-We use these two commands together as `-rl` so that that we recusrsively search for a pattern within the files in the subdirectories it is given. When grep finds, the files with the corresponding pattern, it will print out the list of the file paths. 
+We use these two commands together as `-rl` so that that we recursively search for a pattern within the files in the subdirectories it is given. When `grep` finds the files with the corresponding pattern, it will print out the list of the file paths. 
 
 We are now going to try to use this with our data set. Let's try to identify any files that contain the keyword "Lucayans" in our directory.
 ```
 $ grep -rl "Lucayans"
 ```
-Grep will finds all the matches and outputs
+Grep will find all the matches and outputs
 ```
 written_2/travel_guides/berlitz2/Bahamas-History.txt
 ```
@@ -22,7 +22,7 @@ $ cat written_2/travel_guides/berlitz2/Bahamas-History.txt
 ```
 <img width="100%" alt="Screen Shot 2023-02-11 at 3 02 26 PM" src="https://user-images.githubusercontent.com/83614302/218284742-9a9d6f4e-9bd9-47f4-9391-7075f7a81641.png">
 
-As you can see, Lucayans appears in this document as highlighted. 
+As you can see, "Lucayans" appears in the document above as highlighted. 
 
 We now try this command with a keyword that occurs in multiple files. 
 ```
@@ -66,7 +66,7 @@ written_2/travel_guides/berlitz2/Paris-WhereToGo.txt
 written_2/travel_guides/berlitz2/Portugal-History.txt
 written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
 ```
-If we wanted to inport these outputs into a `.txt` file, we simply add `> results.txt` at the end, which would create a file which includes the output. 
+If we wanted to import these outputs into a `.txt` file, we simply add `> results.txt` at the end, which would create a file including the output. 
 
 ## `grep -c`
 * `grep -c` - `Suppress  normal  output;  instead  print  a  count of matching lines for each input file.  With the -v, --invert-match option (see below), count non-matching lines.  (-c is specified by POSIX.)` will output a number indicating the number of times a given pattern/keyword apprears in a file. We can extend this functionality to find the number of occurances of the a keyword in a directory by using `-rc`.
@@ -91,9 +91,9 @@ Berk/ch7.txt:42
 which indicates that "The" occurs in `ch1.txt` 60 times, in `ch2.txt` 67 times, in `CH4.txt` 66 times, and in `ch7.txt` 42 times.
 
 ## `grep -n`
-* `grep -n` - `Prefix each line of output with the 1-based line number within its input file.  (-n is specified by POSIX.)` displays the number of the lines in which the given pattern/keyword is found in a file. 
+* `grep -n` - `Prefix each line of output with the 1-based line number within its input file.  (-n is specified by POSIX.)` displays the number of the lines in which the given pattern/keyword is found in the file. 
 
-Let's test this out by searching for the word "heritage" in the `chA.txt` in the `Castro/` directory/ 
+Let's test this out by searching for the word "heritage" in the `chA.txt` in the `Castro/` directory: 
 ```
 $ grep -n "heritage" chA.txt 
 ```
@@ -104,7 +104,7 @@ We will get the following output:
 ```
 Showing that the word is is present on line 19 and 107. 
 
-We can also apply the recursive search to this command, to search for a keyword in files within directories, and grep print find the file and line that those keywords are mentioned. 
+We can also apply the recursive search to this command, to search for a keyword in files within directories and sub-directories, grep will print the file and line that those keywords are mentioned. 
 
 Let's try looking for the word "money" in the entire `Castro/` directory.
 ```
