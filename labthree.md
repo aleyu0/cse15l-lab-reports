@@ -1,7 +1,7 @@
 # `Grep` commands
-To find out what grep does, it would be helpful for us to ask for the manual in out command. So, after I have logged into my remote account through `ssh`, I asked for the manual through `man grep`. In this lab report, we will explore `-rl`, `-c`, `-n`, and `v` and use them in the the `./written_2` directory given from the skill demo data. 
+To find out what grep does, it would be helpful for us to ask for the manual in out command. So, after I have logged into my remote account through `ssh`, I asked for the manual through `man grep`. In this lab report, we will explore `-l`, `-c`, `-n`, and `-v` and use them in the the `./written_2` directory given from the skill demo data. 
 
-## `grep -rl`
+## `grep -l`
 * `grep -l` - `Suppress  normal  output;  instead  print the name of each input file from which output would normally have been printed.  The scanning will stop on the first match.  (-l is specified by POSIX.)` essentially lists all of the matched produced by the other command.
 * `grep -r` - `Read all files under each directory, recursively, following symbolic links only if they are on the command line.  This is equivalent to the -d recurse option.`
 
@@ -68,7 +68,7 @@ written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
 ```
 If we wanted to inport these outputs into a `.txt` file, we simply add `> results.txt` at the end, which would create a file which includes the output. 
 
-## `grep -rc`
+## `grep -c`
 * `grep -c` - `Suppress  normal  output;  instead  print  a  count of matching lines for each input file.  With the -v, --invert-match option (see below), count non-matching lines.  (-c is specified by POSIX.)` will output a number indicating the number of times a given pattern/keyword apprears in a file. We can extend this functionality to find the number of occurances of the a keyword in a directory by using `-rc`.
 
 We can try this out by looking for the number of times the word "The" is mentioned in the file `ch1.txt`.
@@ -116,3 +116,8 @@ Castro/chL.txt:42:Cruising involves driving very slowly up and down city streets
 Castro/chP.txt:62:A custom, often expressed only after it occurs, of giving a little extra when making a transaction or closing a bargain. For instance, when buying candy, the vendor may add one extra piece, de pilón, to surprise and make a child happy. John Bourke writes about an ancient custom in Mexico still used in the late nineteenth century: a merchant kept a tin cylinder for each customer, and after each purchase he’d drop a bean into it. After the total number of beans reached sixteen or eighteen, the customer was given six cents in money or goods. This was the pilón, a type of dividend given to the client for purchasing from the same merchant.
 ```
 showing us that the word "money" can be found in `chL.txt` on line 42 and `chP.txt` on line 62.
+
+## `grep -v`
+* `grep -v` - `Invert the sense of matching, to select non-matching lines.  (-v is specified by POSIX.)`, will print out the lines that do not include the specified keyword/pattern. 
+
+We can try to look for a line that doesn't include a space in the 
