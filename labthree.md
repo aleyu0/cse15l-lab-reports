@@ -88,4 +88,7 @@ Berk/ch1.txt:60
 Berk/ch2.txt:67
 Berk/ch7.txt:42
 ```
-which indicates that "The" occurs in `ch1.txt` 60 times, in `ch2.txt` 67 times, in `CH4.txt` 66 times, and in `ch7.txt` 42 times.  
+which indicates that "The" occurs in `ch1.txt` 60 times, in `ch2.txt` 67 times, in `CH4.txt` 66 times, and in `ch7.txt` 42 times.
+
+## `grep -n`
+
