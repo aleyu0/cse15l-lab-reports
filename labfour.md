@@ -14,7 +14,7 @@ To clone our repository, we first go the forked repository on Github. Click on t
 So now we enter `git clone git@github.com:aleyu0/lab7.git` in bash.
 
 ## Run the tests demonstrating that they fail
-We now change our directory the cloned directory. `cd lab7`.
+We now change our directory the cloned directory. `cd la <tab>`, which autocompletes to `cd lab7`. This is because there are no other subdirectories that start with la in the current directory. 
 
 To perform the test, we need to compile the tester file and implementation files using
 ```
@@ -29,7 +29,7 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
 As you can see, there is one failure.
 
 ## Edit the code file to fix the failing test
-We can go to the text editor built-in to bash `nano ListExamples.java`
+We can go to the text editor built-in to bash `nano ListEx<tab>`, which autocomplete to `nano ListExamples`, we now type `.j <tab>` `nano ListExamples.java`
 
 <img width="50%" alt="Screen Shot 2023-02-26 at 20 34 37" src="https://user-images.githubusercontent.com/83614302/221475128-9019d6d4-d245-41d5-8713-b86525b8c49c.png">
 
