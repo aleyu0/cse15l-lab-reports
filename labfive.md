@@ -30,6 +30,8 @@ Here is how someone who didn't cheat would complete the task:
 6.	Commit and push the resulting change to your Github account
   * `git commit ListExamples.java -m “Updated”` to commit back to my branch
   * `git push` to push changed
+ 
+[See lab report 4 for more details.]([url](https://aleyu0.github.io/cse15l-lab-reports/labfour.html))
 
 As we found out, there was a way to speed this whole process, up by writing a bash script, which would perform all the tasks at one time, which reduces the time wasted typing out each command. 
 Using chat, GPT, I was able to write a bash script, which would do all of the above processes and one go. All I would need to do is to save the bash script `task.sh` in the repository on the ieng6 server, then run `task.sh` in bash.
