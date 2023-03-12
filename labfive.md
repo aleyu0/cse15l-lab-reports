@@ -32,4 +32,78 @@ Here is how someone who didn't cheat would complete the task:
   * `git push` to push changed
 
 As we found out, there was a way to speed this whole process, up by writing a bash script, which would perform all the tasks at one time, which reduces the time wasted typing out each command. 
- 
+Using chat, GPT, I was able to write a bash script, which would do all of the above processes and one go. All I would need to do is to save the bash script `task.sh` in the repository on the ieng6 server, then run `task.sh` in bash.
+```
+#!/bin/bash
+
+# Log into ieng6
+ssh cs15lwi23aed@ieng6.ucsd.edu
+
+# Clone the forked repository from GitHub
+git clone git@github.com:aleyu0/lab7.git
+
+# Change to the cloned directory
+cd lab7
+
+# Run the tests and demonstrate that they fail
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples
+
+# Overwrite ListExamples.java to fix the failing test
+echo "import java.util.ArrayList;
+import java.util.List;
+
+interface StringChecker { boolean checkString(String s); }
+
+class ListExamples {
+
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(s);
+      }
+    }
+    return result;
+  }
+
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+}
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index2 += 1;
+    }
+    return result;
+  }
+}" > ListExamples.java
+
+# Run the tests and demonstrate that they now succeed
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples
+
+# Commit and push the changes to GitHub
+git add ListExamples.java
+git commit -m "Updated ListExamples.java"
+git push
+
+```
