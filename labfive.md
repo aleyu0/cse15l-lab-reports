@@ -12,4 +12,31 @@ During the lab session in week 7, we performed a series of tasks with time restr
 
 [Click here for the repository]([url](https://github.com/ucsd-cse15l-w23/lab7)).
 
+Here is how someone who didn't cheat would complete the task:
+1. Log into ieng6 using 
+  * `ssh cs15lwi23aed@ieng6.ucsd.edu`
+2. Clone your fork of the repository from your Github account 
+  * `git clone <paste>` which would give this `git clone git@github.com:aleyu0/lab7.git`
+3. Run the tests, demonstrating that they fail
+  * `cd lab7` to enter the cloned repository
+  * `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` achived by either copy pasting or using the <up> arrow to retrieve from history
+  * `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples` achived by either copy pasting or using the <up> arrow to retrieve from history
+
+4	Edit the code file to fix the failing test
+
+ctrl+w 
+nano ListExample.java
+
+
+5	Run the tests, demonstrating that they now succeed
+
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples
+
+
+6	Commit and push the resulting change to your Github account
+
+git commit ListExamples.java -m “Updated”
+
 As we found out, there was a way to speed this whole process, up by writing a bash script, which would perform all the tasks at one time, which reduces the time wasted typing out each command. 
