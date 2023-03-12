@@ -21,22 +21,15 @@ Here is how someone who didn't cheat would complete the task:
   * `cd lab7` to enter the cloned repository
   * `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` achived by either copy pasting or using the <up> arrow to retrieve from history
   * `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples` achived by either copy pasting or using the <up> arrow to retrieve from history
-
-4	Edit the code file to fix the failing test
-
-ctrl+w 
-nano ListExample.java
-
-
-5	Run the tests, demonstrating that they now succeed
-
-javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
-
-java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples
-
-
-6	Commit and push the resulting change to your Github account
-
-git commit ListExamples.java -m “Updated”
+4.	Edit the code file to fix the failing test
+  * `nano ListExample.java` to edit the java file
+  * ctrl+w for search and edit the file
+5.	Run the tests, demonstrating that they now succeed
+  * `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` by using the <up> arrow
+  * `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples` by using the <up> arrow
+6.	Commit and push the resulting change to your Github account
+  * `git commit ListExamples.java -m “Updated”` to commit back to my branch
+  * `git push` to push changed
 
 As we found out, there was a way to speed this whole process, up by writing a bash script, which would perform all the tasks at one time, which reduces the time wasted typing out each command. 
+ 
