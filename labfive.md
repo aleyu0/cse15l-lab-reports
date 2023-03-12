@@ -105,5 +105,5 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
 git add ListExamples.java
 git commit -m "Updated ListExamples.java"
 git push
-
 ```
+The only difference made from a bad script instead of manually, doing the tasks, would be when editing the list. Example start Java file, where the basket will override the file with the text, whilst when doing it manually, it will require a text editor and going through the code to find the error.
